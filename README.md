@@ -285,15 +285,15 @@ Best revenue day: Friday generated the highest total revenue and ROI, followed c
 Daily growth rates fluctuated without a clear upward or downward trend.
 
 **ENGAGEMNET METRICS**
-Top campaign: Facebook_Retargeting at ~3 %.
-Lowest campaign: Banner_Partner at ~0.03 %.
-Top category: Influencer (~1 % CTR).
+-Top campaign: Facebook_Retargeting at ~3 %.
+-Lowest campaign: Banner_Partner at ~0.03 %.
+-Top category: Influencer (~1 % CTR).
 
 ## CONCLUSION
 
-**Double-down on Influencer campaigns for better profitability and higher conversion rates.
-Optimize or discontinue under-performing social campaigns with ROI below 100 %.
-Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**
+**Double-down on Influencer campaigns for better profitability and higher conversion rates.**
+**Optimize or discontinue under-performing social campaigns with ROI below 100 %.**
+**Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**
 
 ## Findings
 

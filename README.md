@@ -265,72 +265,46 @@ SELECT
 
 ## FINDINGS
 
-**ROI**
+### ROI  
 a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%  
 b.Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)  
 c.Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%  
 d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.  
 
-**COST TO ACQUIRE LEADS AND ORDERS**
+### COST TO ACQUIRE LEADS AND ORDERS  
 a.Best Overall Performer: YouTube_Blogger offers the strongest cost efficiency—moderate lead cost but the lowest cost per order, showing excellent lead-to-order conversion.
 b.Lead vs. Order Gap: Instagram_Tier2 generates the cheapest leads but has a much higher cost per order, indicating weak conversion from leads to paying customers.
 c.High-Cost Campaigns: Facebook_LAL, Google_Hot, and FacebOOK_Tier2 have very high costs for both leads and orders, suggesting they need optimization or budget cuts
 
-**PERFORMANCE BASED ON CATEGORY**
-a.Influencer category achieves the best order conversion rate (~17 %) and highest profit margins.
-b.Social category generates leads easily but converts them to orders at only ~8 %.
-media has lowest clicks per impression but 2nd highest conversion rate from leads to order
+### PERFORMANCE BASED ON CATEGORY  
+a.Influencer category achieves the best order conversion rate (~17 %) and highest profit margins.  
+b.Social category generates leads easily but converts them to orders at only ~8 %.  
+media has lowest clicks per impression but 2nd highest conversion rate from leads to order  
 
-**DAY WISE TRENDS**
-Best revenue day: Friday generated the highest total revenue and ROI, followed closely by Saturday.
-Daily growth rates fluctuated without a clear upward or downward trend.
+### DAY WISE TRENDS  
+a.Best revenue day: Friday generated the highest total revenue and ROI, followed closely by Saturday.  
+b.Daily growth rates fluctuated without a clear upward or downward trend.  
 
 **ENGAGEMNET METRICS**
--Top campaign: Facebook_Retargeting at ~3 %.
--Lowest campaign: Banner_Partner at ~0.03 %.
--Top category: Influencer (~1 % CTR).
+-Top campaign: Facebook_Retargeting at ~3 %.  
+-Lowest campaign: Banner_Partner at ~0.03 %.  
+-Top category: Influencer (~1 % CTR).  
 
 ## CONCLUSION
 
-**Double-down on Influencer campaigns for better profitability and higher conversion rates.**
-**Optimize or discontinue under-performing social campaigns with ROI below 100 %.**
-**Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**
+**The most successful camapign was Youtube_blogger in terms of ROI**  
+**Double-down on Influencer campaigns for better profitability and higher conversion rates.**  
+**Social category is the worst performing category with huge loses should spent on these campaigns very carefully**  
+**Optimize or discontinue under-performing social campaigns with ROI below 100 %.**  
+**Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**  
+**On a particular day a campaign can perform better than any other day. For example youtube_blogger could generate 1.5x of ROI on saturdays compared to their overall ROI**
+**Media category and banner_partner has the lowest clicks per impression but a better conversion rate when they converted into leads so if focused on the initial phase and can get better CTR the category could perform better**  
 
-## Findings
 
-- **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
-- **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
-- **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
-- **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
+## Author - Nelson Crasta
 
-## Reports
+This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles.
 
-- **Sales Summary**: A detailed report summarizing total sales, customer demographics, and category performance.
-- **Trend Analysis**: Insights into sales trends across different months and shifts.
-- **Customer Insights**: Reports on top customers and unique customer counts per category.
 
-## Conclusion
-
-This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
-
-## How to Use
-
-1. **Clone the Repository**: Clone this project repository from GitHub.
-2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
-3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
-4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
-
-## Author - Zero Analyst
-
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
-
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
-
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
 
 Thank you for your support, and I look forward to connecting with you!

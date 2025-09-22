@@ -267,10 +267,9 @@ SELECT
 
 **ROI**
 a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%  
-ddd
-b.Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)
-c.Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%
-d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.
+b.Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)  
+c.Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%  
+d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.  
 
 **COST TO ACQUIRE LEADS AND ORDERS**
 a.Best Overall Performer: YouTube_Blogger offers the strongest cost efficiency—moderate lead cost but the lowest cost per order, showing excellent lead-to-order conversion.

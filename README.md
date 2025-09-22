@@ -26,8 +26,8 @@ i will be using MySQL for this project.
 - **Database Creation**: The project starts by creating a database named `campaign_db`.
 - **Data import**: The dataset in marketing.csv was loaded into MySQL as a table named marketing using MySQL Workbench’s Import Wizard. From the Workbench menu,  
   I selected Server → Data Import, chose the CSV file, selected my campaign_db schema, and started the import. MySQL automatically created the table and inferred the column types.
-  The table structure includes columns for id,c_date,campaign_name,category,campaign_id,impressions,mark_spent,clicks,leads,orders,revenue,
-  for a reference how my table schema looks like i have written the code for the same.
+  The table structure includes columns for id,c_date,campaign_name,category,campaign_id,impressions,mark_spent,clicks,leads,orders,revenue.
+  For a reference how `marketing` table schema looks like i have written the code for the same.
 
 ```sql
 CREATE DATABASE campaign_db;
@@ -266,7 +266,8 @@ SELECT
 ## FINDINGS
 
 **ROI**
-a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%
+a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%  
+ddd
 b.Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)
 c.Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%
 d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.

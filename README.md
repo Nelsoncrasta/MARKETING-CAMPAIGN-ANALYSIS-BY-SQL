@@ -292,14 +292,14 @@ b.Daily growth rates fluctuated without a clear upward or downward trend.
 
 ## CONCLUSION
 
-**The most successful camapign was Youtube_blogger in terms of ROI**  
-**Double-down on Influencer campaigns for better profitability and higher conversion rates.**  
-**Social category is the worst performing category with huge loses should spent on these campaigns very carefully**  
-**Optimize or discontinue under-performing social campaigns with ROI below 100 %.**  
-**Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**  
-**On a particular day a campaign can perform better than any other day. For example youtube_blogger could generate 1.5x of ROI on saturdays compared to their overall ROI**
-**Media category and banner_partner has the lowest clicks per impression but a better conversion rate when they converted into leads so if focused on the initial phase and can get better CTR the category could perform better**  
-**On Friday, Saturday,Monday the revenue could go higher as compared to rest, Sunday has recorded the lowest ROI**  
+1. **The most successful camapign was Youtube_blogger in terms of ROI**  
+2. **Double-down on Influencer campaigns for better profitability and higher conversion rates.**  
+3. **Social category is the worst performing category with huge loses should spent on these campaigns very carefully**  
+4. **Optimize or discontinue under-performing social campaigns with ROI below 100 %.**  
+5. **Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**  
+6. **On a particular day a campaign can perform better than any other day. For example youtube_blogger could generate 1.5x of ROI on saturdays compared to their overall ROI**
+7. **Media category and banner_partner has the lowest clicks per impression but a better conversion rate when they converted into leads so if focused on the initial phase and can get better CTR the category could perform better**  
+8. **On Friday, Saturday,Monday the revenue could go higher as compared to rest, Sunday has recorded the lowest ROI**  
 
 
 ## Author - Nelson Crasta

@@ -299,6 +299,7 @@ b.Daily growth rates fluctuated without a clear upward or downward trend.
 **Friday campaigns show strong revenue potential, suggesting that ad scheduling can influence success.**  
 **On a particular day a campaign can perform better than any other day. For example youtube_blogger could generate 1.5x of ROI on saturdays compared to their overall ROI**
 **Media category and banner_partner has the lowest clicks per impression but a better conversion rate when they converted into leads so if focused on the initial phase and can get better CTR the category could perform better**  
+**On Friday, Saturday,Monday the revenue could go higher as compared to rest, Sunday has recorded the lowest ROI**  
 
 
 ## Author - Nelson Crasta

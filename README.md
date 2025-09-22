@@ -1,1 +1,320 @@
 # MARKETING-CAMPAIGN-ANALYSIS-BY-SQL
+
+## Project Overview
+
+**Project Title**: MARKETING CAMPAIGN ANALYSIS 
+**Level**: Beginner  
+**Database**: `campaign_db`
+
+This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries.
+
+This project is to demostrate my SQL knowledge, i will be solving some business problems and give some insight at the end of it based on some queries output. 
+
+i will be using MySQL for this project.
+
+## Objectives
+
+1. **Set up a marketing database**: Creating a Database and importing the CSV file as a table in the Database
+2. **Data Cleaning**: Identify and remove any records with missing or null values.
+3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
+4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the camapagin data.
+
+## Project Structure
+
+### 1. Database Setup
+
+- **Database Creation**: The project starts by creating a database named `campaign_db`.
+- **Data import**: The dataset in marketing.csv was loaded into MySQL as a table named marketing using MySQL Workbench’s Import Wizard. From the Workbench menu, I selected Server → Data Import, chose the CSV file, selected my campaign_db schema, and started the import. MySQL automatically created the table and inferred the column types.
+
+- The table structure includes columns for id,c_date,campaign_name,category,campaign_id,impressions,mark_spent,clicks,leads,orders,revenue for a reference how my table schema looks like i have written the code for the same.
+
+```sql
+CREATE DATABASE campaign_db;
+
+CREATE TABLE marketing
+(
+    id INT PRIMARY KEY,
+    c_date DATE,	
+    campaign_name VARCHAR(100),
+    category VARCHAR(50),	
+    campaign_id INT,
+    impressions INT,
+    mark_spent FLOAT,
+    clicks INT,
+    leads INT,	
+    orders INT,
+    revenue FLOAT
+);
+```
+
+### 2. Data Exploration & Cleaning
+
+- **Record Count**: Determine the total number of records in the dataset.
+- **Campaign names**: Find out how many unique campaigns are in the dataset.
+- **Category Count**: Identify all unique categories in the dataset.
+- **Null Value Check**: Check for any null values in the dataset if found delete them.
+
+```sql
+SELECT COUNT(*) FROM marketing;
+SELECT DISTINCT campaign_name FROM marketing;
+SELECT DISTINCT category FROM marketing;
+
+SELECT * FROM marketing
+WHERE 
+		c_date IS NULL OR campaign_name IS NULL OR category IS NULL;
+
+### 3. Data Analysis & Findings
+
+The following SQL queries were developed to answer specific business questions:
+
+1. **WHICH COMPAIGNS DELIVERS THE BEST RETURN ON INVESTMENT**:
+
+```sql
+SELECT campaign_name, 
+		ROUND((expenditure/Revenue)*100,2) AS ROI
+    FROM (
+					SELECT campaign_name,SUM(mark_spent) AS expenditure,
+                  SUM(revenue) AS Revenue FROM marketing
+					        GROUP BY 1) AS t1
+ORDER BY 2 DESC;
+```
+
+2. **WHAT IS THE AVERAGE COST TO ACQUIRE A LEAD OR AN ORDER**:
+
+```sql
+SELECT campaign_name,
+        ROUND(SUM(mark_spent)/sum(leads),2) AS expense_perlead,
+        RANK () OVER (ORDER BY ROUND(SUM(mark_spent)/sum(leads),2) ) as leads_ranks, 
+        ROUND(SUM(mark_spent)/sum(orders),2) AS expense_perorder,
+        RANK() OVER (ORDER BY ROUND(SUM(mark_spent)/sum(orders),2) ) AS order_ranks
+        FROM marketing
+GROUP BY 1
+ORDER BY 3,5;
+```
+
+3. **WHAT IS THE AVERAGE COST TO ACQUIRE ORDER BY CATEGORY AND CAMPAIGNS**:
+   
+```sql
+SELECT 
+		category,
+        ROUND(SUM(mark_spent)/sum(leads),2) AS expense_perlead,
+        ROUND(SUM(mark_spent)/sum(orders),2) AS expense_perorder
+        FROM marketing
+GROUP BY 1
+ORDER BY 3;
+```
+
+```sql
+SELECT 
+		campaign_name,
+        ROUND(SUM(mark_spent)/sum(leads),2) AS expense_perlead,
+        ROUND(SUM(mark_spent)/sum(orders),2) AS expense_perorder
+        FROM marketing
+GROUP BY 1
+ORDER BY 3;
+```
+
+4. **CONVERSION RATE FROM LEADS TO ORDER BY CATEGORY AND CAMPAIGNS**:
+
+```sql
+SELECT category,
+	  (SUM(ORDERS)/SUM(LEADS))*100 AS conversion_rate
+	  FROM marketing
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+```sql
+SELECT campaign_name,
+	    (SUM(ORDERS)/SUM(LEADS))*100 AS conversion_rate
+	    FROM marketing
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+5. **WHICH CAMAPIGN AND CATEGORY HAS THE BEST CLICK THROUGH RATE**:
+```sql
+SELECT 
+	  campaign_name,
+    ROUND((SUM(clicks)/SUM(impressions))*100,2) AS CTR FROM marketing
+WHERE impressions>0
+GROUP BY 1
+order by 2 desc;
+```
+```sql
+SELECT 
+	  category,
+    ROUND((SUM(clicks)/SUM(impressions))*100,2) AS CTR FROM marketing
+WHERE impressions>0
+GROUP BY 1
+order by 2 desc;
+```
+
+6. **THE PERCENTAGE OF CONVERSION FROM EACH FIELD**:
+```sql
+select 
+	category,
+    ROUND((SUM(clicks)/SUM(impressions))*100,2) AS clicks_per_impression,
+    ROUND((SUM(leads)/SUM(clicks))*100,2) AS leads_per_clicks,
+    ROUND((SUM(orders)/SUM(leads))*100,2) AS orders_per_leads
+    FROM marketing
+GROUP BY 1
+ORDER BY 4 DESC;
+```
+
+7. **TOP SPENDING V/S TOP EARNING CATEGORY AND CAMPAIGNS**:
+```sql
+SELECT 
+	category,
+    ROUND(SUM(mark_spent),0) as mark_spent,
+    RANK() OVER(ORDER BY SUM(mark_spent) DESC) AS expense_rank,
+	  ROUND(SUM(revenue),0) AS revenue,
+    RANK() OVER(ORDER BY SUM(revenue)DESC) AS revenue_rank,
+    ROUND((SUM(revenue)/SUM(mark_spent))*100,0)AS ROI
+    FROM marketing
+GROUP BY 1;
+```
+
+```sql
+SELECT 
+	campaign_name,
+    ROUND(SUM(mark_spent),0) as mark_spent,
+    RANK() OVER(ORDER BY SUM(mark_spent) DESC) AS expense_rank,
+	  ROUND(SUM(revenue),0) AS revenue,
+    RANK() OVER(ORDER BY SUM(revenue)DESC) AS revenue_rank,
+    ROUND((SUM(revenue)/SUM(mark_spent))*100,0)AS ROI
+    FROM marketing
+GROUP BY 1;
+```
+
+8. **WHICH ADVERTISING CHANNEL GIVES BEST PROFIT MARGIN**:
+```sql
+SELECT category,
+		    ROUND(SUM(revenue)-SUM(mark_spent),0) AS profit_margin 
+        FROM marketing
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+```sql
+SELECT campaign_name,
+		    ROUND(SUM(revenue)-SUM(mark_spent),0) AS profit_margin 
+        FROM marketing
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+9. **THE CAMPAIGNS WHICH GENERATED ZERO REVENUE, THEIR DAY AND THE NUMBER OF TIMES THEY GENERATED ZERO REVENUE**:
+```sql
+SELECT DAYNAME(c_date),COUNT(*) AS number_of_days,
+		    SUM(mark_spent) AS expense 
+        FROM marketing
+WHERE revenue=0 OR orders = 0
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+10. **ON WHICH DAY A PARTICULAR CAMPAIGN HAS RECORDED HIGHEST ROI**
+
+```sql
+WITH ranking_days AS (
+SELECT campaign_name,
+		DAYNAME(c_date) AS dayname,
+        ROUND((SUM(revenue)/SUM(mark_spent)*100),2) AS ROI,
+        DENSE_RANK() OVER (PARTITION BY campaign_name ORDER BY SUM(revenue)/SUM(mark_spent) DESC) AS ranks
+        FROM marketing
+GROUP BY 1,2)
+SELECT * FROM ranking_days 
+WHERE ranks=1 
+ORDER BY 3 DESC;
+```
+11. **WHAT IS THE GROWTH OVER DAY ON EACH DAY FOR EACH CAMPAIGNS**:
+```sql
+SELECT
+    campaign_name,
+    c_date,
+    DAYNAME(c_date) AS dayname,
+    revenue,
+    LAG(revenue) OVER (
+        PARTITION BY campaign_name
+        ORDER BY c_date
+    ) AS prev_day_revenue,
+    -- % change compared to previous day
+    ROUND(
+        ( (revenue - LAG(revenue) OVER (
+                PARTITION BY campaign_name
+                ORDER BY c_date
+            )
+          ) / NULLIF(LAG(revenue) OVER (
+                PARTITION BY campaign_name
+                ORDER BY c_date
+            ), 0)
+        ) * 100, 2
+    ) AS revenue_growth_pct
+FROM marketing
+ORDER BY campaign_name, c_date;
+```
+12. **DAILY PERFORMANCE TRENDS**:
+```sql
+SELECT 
+	  c_date,
+    ROUND(SUM(mark_spent),0) AS expenses,
+    SUM(revenue) AS revenue,
+    SUM(orders) AS total_orders,
+    ROUND(SUM(mark_spent)/SUM(orders),0) AS per_order_expense
+    FROM marketing
+GROUP BY 1;
+```
+
+13. **OVERALL CONVERSION RATES FROM LEADS**:
+```sql
+SELECT 
+	(SUM(orders)/SUM(leads))*100 AS total_avg 
+    FROM marketing;
+```
+
+## FINDINGS
+
+**ROI**
+a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin.
+b.Facebook_Retargeting ranked second with an ROI of about 201 %.
+c.Instagram_Tier2 performed the worst, recording only ~63 % ROI.
+d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.
+
+## Findings
+
+- **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
+- **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
+- **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
+- **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
+
+## Reports
+
+- **Sales Summary**: A detailed report summarizing total sales, customer demographics, and category performance.
+- **Trend Analysis**: Insights into sales trends across different months and shifts.
+- **Customer Insights**: Reports on top customers and unique customer counts per category.
+
+## Conclusion
+
+This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
+
+## How to Use
+
+1. **Clone the Repository**: Clone this project repository from GitHub.
+2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
+3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
+4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
+
+## Author - Zero Analyst
+
+This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+
+### Stay Updated and Join the Community
+
+For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
+
+- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
+- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
+- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
+
+Thank you for your support, and I look forward to connecting with you!

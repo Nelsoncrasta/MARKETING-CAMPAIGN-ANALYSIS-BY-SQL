@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Project Title**: MARKETING CAMPAIGN ANALYSIS 
+**Project Title**: MARKETING CAMPAIGN ANALYSIS   
 **Level**: Beginner  
 **Database**: `campaign_db`
 
@@ -10,7 +10,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 This project is to demostrate my SQL knowledge, i will be solving some business problems and give some insight at the end of it based on some queries output. 
 
-i will be using MySQL for this project.
+I will be using MySQL for this project.
 
 ## Objectives
 

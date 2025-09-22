@@ -25,9 +25,9 @@ i will be using MySQL for this project.
 
 - **Database Creation**: The project starts by creating a database named `campaign_db`.
 - **Data import**: The dataset in marketing.csv was loaded into MySQL as a table named marketing using MySQL Workbench’s Import Wizard. From the Workbench menu,  
-- I selected Server → Data Import, chose the CSV file, selected my campaign_db schema, and started the import. MySQL automatically created the table and inferred the column types.
-- The table structure includes columns for id,c_date,campaign_name,category,campaign_id,impressions,mark_spent,clicks,leads,orders,revenue,
-- for a reference how my table schema looks like i have written the code for the same.
+  I selected Server → Data Import, chose the CSV file, selected my campaign_db schema, and started the import. MySQL automatically created the table and inferred the column types.
+  The table structure includes columns for id,c_date,campaign_name,category,campaign_id,impressions,mark_spent,clicks,leads,orders,revenue,
+  for a reference how my table schema looks like i have written the code for the same.
 
 ```sql
 CREATE DATABASE campaign_db;

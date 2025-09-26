@@ -266,29 +266,29 @@ SELECT
 ## FINDINGS
 
 ### ROI  
-a.YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%  
-b.Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)  
-c.Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%  
-d.Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.  
+- YouTube_Blogger delivered the highest ROI at ~377 %, making it the most successful campaign by a wide margin and a conversion rates from lead to order of about 19%     
+- Facebook_Retargeting ranked second with an ROI of about 201 % and it has a highest conversion rates from leads to order(21%)  
+- Instagram_Tier2 performed the worst, recording only ~63 % ROI and also has the lowest conversion rate only 3%  
+- Campaigns with ROI below 100 %—including Facebook_Tier1, Facebook_Tier2, Google_Wide, and Instagram_Tier2—can be considered unsuccessful.  
 
 ### COST TO ACQUIRE LEADS AND ORDERS  
-a.Best Overall Performer: YouTube_Blogger offers the strongest cost efficiency—moderate lead cost but the lowest cost per order, showing excellent lead-to-order conversion.
-b.Lead vs. Order Gap: Instagram_Tier2 generates the cheapest leads but has a much higher cost per order, indicating weak conversion from leads to paying customers.
-c.High-Cost Campaigns: Facebook_LAL, Google_Hot, and FacebOOK_Tier2 have very high costs for both leads and orders, suggesting they need optimization or budget cuts
+- Best Overall Performer: YouTube_Blogger offers the strongest cost efficiency—moderate lead cost but the lowest cost per order, showing excellent lead-to-order conversion.  
+- Lead vs. Order Gap: Instagram_Tier2 generates the cheapest leads but has a much higher cost per order, indicating weak conversion from leads to paying customers.  
+- High-Cost Campaigns: Facebook_LAL, Google_Hot, and FacebOOK_Tier2 have very high costs for both leads and orders, suggesting they need optimization or budget cuts  
 
 ### PERFORMANCE BASED ON CATEGORY  
-a.Influencer category achieves the best order conversion rate (~17 %) and highest profit margins.  
-b.Social category generates leads easily but converts them to orders at only ~8 %.  
-media has lowest clicks per impression but 2nd highest conversion rate from leads to order  
+- Influencer category achieves the best order conversion rate (~17 %) and highest profit margins.  
+- Social category generates leads easily but converts them to orders at only ~8 %.  
+- Media has lowest clicks per impression but 2nd highest conversion rate from leads to order  
 
 ### DAY WISE TRENDS  
-a.Best revenue day: Friday generated the highest total revenue and ROI, followed closely by Saturday.  
-b.Daily growth rates fluctuated without a clear upward or downward trend.  
+- Best revenue day: Friday generated the highest total revenue and ROI, followed closely by Saturday.  
+- Daily growth rates fluctuated without a clear upward or downward trend.  
 
-**ENGAGEMNET METRICS**
--Top campaign: Facebook_Retargeting at ~3 %.  
--Lowest campaign: Banner_Partner at ~0.03 %.  
--Top category: Influencer (~1 % CTR).  
+### ENGAGEMNET METRICS
+- Top campaign: Facebook_Retargeting at ~3 %.  
+- Lowest campaign: Banner_Partner at ~0.03 %.  
+- Top category: Influencer (~1 % CTR).  
 
 ## CONCLUSION
 
@@ -307,5 +307,3 @@ b.Daily growth rates fluctuated without a clear upward or downward trend.
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles.
 
 
-
-Thank you for your support, and I look forward to connecting with you!
